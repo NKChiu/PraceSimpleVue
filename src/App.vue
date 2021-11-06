@@ -36,7 +36,7 @@
         <v-container fluid fill-height>
           <v-layout justify-center align-center>
             <v-flex shrink>
-              
+              <router-view/>
             </v-flex>
           </v-layout>
         </v-container>
@@ -63,6 +63,7 @@ export default {
   methods:{
     goPage(item){
       console.log(item.url);
+      this.$router.push({path: item.url});
     }
   }
 }
